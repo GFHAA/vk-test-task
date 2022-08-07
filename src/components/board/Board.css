@@ -1,0 +1,7 @@
+.board{
+    width: 272px;
+    background: #DFE3E6;
+    padding: 8px 12px 12px 12px;
+    border-radius: 3px;
+    margin-right: 12px;
+}

@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import Board from "./components/board/Board";
+import "./index.css"
 
 function App() {
+  const todoItems = [
+    {title: "Пройти курс по React", id: 1},
+    {title: "Отметить день рождения", id: 2},
+    {title: "Записаться на курсы английского языка, чтобы уехать жить в Лондон", id: 3},
+    {title: "Сделать бекенд своего сайта на node.js", id: 4},
+
+  ]
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Board items={todoItems}/>
     </div>
   );
 }
