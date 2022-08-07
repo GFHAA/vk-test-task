@@ -19,3 +19,27 @@
 .close{
     cursor: pointer;
 }
+.bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bottom button {
+    font-weight: 900;
+    background: #39C071;
+    border-radius: 3px;
+    padding: 8px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+.card{
+    background: #fff;
+    padding: 8px 8px 8px 12px;
+    box-shadow: 0px 1px 4px rgb(9 45 66 / 25%);
+    border-radius: 3px;
+    line-height: 19px;
+    font-weight: 400;
+    margin-bottom: 8px;
+}

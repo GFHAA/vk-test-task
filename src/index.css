@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap');
 
 body {
-    font-family: "Roboto";
+    font-family: 'Montserrat', sans-serif;
     font-size: 13px;
 }
 
@@ -26,19 +26,6 @@ html,
 .App {
     display: flex;
     flex-wrap: wrap;
+    align-items: flex-start;
 }
 
-.bottom {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.bottom button {
-    background: #39C071;
-    border-radius: 3px;
-    padding: 8px;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-}

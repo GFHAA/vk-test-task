@@ -1,31 +1,46 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useRef } from "react";
 import "./Button.css";
 import addSvg from "../../assets/add.svg";
 import closeSvg from "../../assets/cross.svg";
-import Card from "../Card/Card";
 import { useState } from "react";
-const Button = () => {
+const Button = ({ typeOfBoard, board }) => {
   const [openAdd, setOpenAdd] = useState(false);
+  const textarea = useRef(null)
+  function create(){
+    setOpenAdd(false)
+  }
   return (
     <Fragment>
       {openAdd ? (
-        <div className="add-card" >
-          <Card>
+        <div className="add-card">
+          <div className="card">
             <textarea
               className="textarea"
               rows="3"
-              placeholder="Введите название карточки"
+              placeholder={`Введите название ${typeOfBoard[0]}и`}
+              ref={textarea}
             ></textarea>
-          </Card>
+          </div>
           <div className="bottom">
-            <button>Добавить карточку</button>
-            <img src={closeSvg} alt="Картинка крестик" className="close" onClick={()=>setOpenAdd(false)}/>
+            <button
+              onClick={() => {
+                typeOfBoard[1](textarea.current.value, board, create);
+              }}
+            >
+              Добавить карточку
+            </button>
+            <img
+              src={closeSvg}
+              alt="Картинка крестик"
+              className="close"
+              onClick={() => setOpenAdd(false)}
+            />
           </div>
         </div>
       ) : (
-        <div className="button-div" onClick={()=>setOpenAdd(true)}>
+        <div className="button-div" onClick={() => setOpenAdd(true)}>
           <img src={addSvg} alt="Добавить карточку" />
-          <span>Добавить еще одну карточку</span>
+          <span>{`Добавить еще одну ${typeOfBoard[0]}у`}</span>
         </div>
       )}
     </Fragment>
