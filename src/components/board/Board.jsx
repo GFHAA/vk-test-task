@@ -14,12 +14,12 @@ const Board = ({
   return (
     <div
       className="board"
-      // onDragOver={(e) => {
-      //   DragOver(e);
-      // }}
-      // onDrop={() => {
-      //   DropBoard(items);
-      // }}
+      onDragOver={(e) => {
+        DragOver(e);
+      }}
+      onDrop={() => {
+        DropBoard(items);
+      }}
     >
       <span className="title-board">{items && items.title}</span>
 

@@ -67,22 +67,24 @@ function App() {
     );
   }
   function DropBoard(board) {
-    board.todoItems.push(currentCard)
-    const currentCardIndex = currentBoard.todoItems.indexOf(currentCard);
-    currentBoard.todoItems.splice(currentCardIndex, 1);
-    setBoards(
-      boards.map((el) => {
-        if (el) {
-          if (el.id === board.id) {
-            return board;
+    if (board && !board.todoItems.length) {
+      board.todoItems.push(currentCard)
+      const currentCardIndex = currentBoard.todoItems.indexOf(currentCard);
+      currentBoard.todoItems.splice(currentCardIndex, 1);
+      setBoards(
+        boards.map((el) => {
+          if (el) {
+            if (el.id === board.id) {
+              return board;
+            }
+            if (el.id === currentBoard.id) {
+              return currentBoard;
+            }
           }
-          if (el.id === currentBoard.id) {
-            return currentBoard;
-          }
-        }
-        return el;
-      })
-    );
+          return el;
+        })
+      );
+    }
   }
   return (
     <div className="App">

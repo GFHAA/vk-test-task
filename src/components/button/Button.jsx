@@ -27,7 +27,7 @@ const Button = ({ typeOfBoard, board }) => {
                 typeOfBoard[1](textarea.current.value, board, create);
               }}
             >
-              Добавить карточку
+              Добавить {typeOfBoard[0]}у
             </button>
             <img
               src={closeSvg}

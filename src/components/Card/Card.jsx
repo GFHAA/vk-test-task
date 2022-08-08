@@ -1,7 +1,6 @@
 import React from "react";
 import propTypes from "prop-types";
 import "./Card.css";
-import { useState } from "react";
 const Card = ({ children, board, element, DragStart, DragOver, Drop}) => {
   return (
     <div
