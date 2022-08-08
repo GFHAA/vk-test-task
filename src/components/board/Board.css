@@ -4,6 +4,8 @@
     padding: 8px 12px 12px 12px;
     border-radius: 3px;
     margin-right: 12px;
+    overflow: hidden;
+    max-height: calc(100% - 20px);
 }
 .title-board{
     font-weight: 700;
